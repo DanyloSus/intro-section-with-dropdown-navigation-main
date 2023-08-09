@@ -1,30 +1,52 @@
 import { useState } from "react";
-import MobileMenu from "./MobileMenu";
 
-const Header = () => {
+const MobileMenu = () => {
   const [isHover, setIsHover] = useState({ 1: false, 2: false });
 
-  const handleOpen = () => {
+  const handleClose = () => {
     const shadow = document.getElementById("shadow");
-    const mobileMenu = document.getElementById("mobileMenu");
     const menu = document.getElementById("menu");
-    if (mobileMenu) mobileMenu.style.zIndex = "10";
-    if (shadow) shadow.style.opacity = "0.5";
-    if (menu) menu.style.right = "0px";
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (shadow) shadow.style.opacity = "0";
+    if (menu) menu.style.right = "-240px";
 
-    const scrollY = window.scrollY;
+    const scrollY = parseInt(document.body.style.top || "0", 10);
+    document.body.style.overflow = "";
+    document.body.style.position = "";
+    document.body.style.top = "";
 
-    document.body.style.overflow = "hidden";
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollY}px`;
+    window.scrollTo(0, scrollY);
+
+    setTimeout(() => {
+      if (mobileMenu) {
+        mobileMenu.style.zIndex = "-10";
+      }
+    }, 1000);
   };
 
   return (
-    <>
-      <MobileMenu />
-      <header className="w-screen flex items-center px-10 pt-8 lg:pt-6 lg:px-4">
-        <img src="./logo.svg" alt="logo" className="cursor-pointer" />
-        <div className="flex ml-16 gap-10 lg:hidden">
+    <div
+      className="absolute overflow-hidden"
+      id="mobileMenu"
+      style={{ zIndex: "-10" }}
+    >
+      <div
+        className="min-h-screen max-h-full w-screen bg-almost-black transition-opacity duration-1000"
+        style={{ opacity: 0 }}
+        id="shadow"
+      ></div>
+      <div
+        className="bg-almost-white absolute top-0 w-[240px] h-screen pr-4 pt-6 pl-6 transition-all duration-1000"
+        id="menu"
+        style={{ right: "-240px" }}
+      >
+        <img
+          src="./icon-close-menu.svg"
+          alt="icon close menu"
+          className="ml-auto"
+          onClick={handleClose}
+        />
+        <div className="flex flex-col gap-[30px] mt-9">
           <div
             id="features"
             onMouseEnter={() => {
@@ -39,7 +61,7 @@ const Header = () => {
               <img
                 src="./icon-arrow-down.svg"
                 alt="icon arrow down"
-                className="transition-all ease-in-out"
+                className="transition-all"
                 style={isHover[1] ? { rotate: "180deg" } : {}}
               />
             </a>
@@ -73,7 +95,7 @@ const Header = () => {
               <img
                 src="./icon-arrow-down.svg"
                 alt="icon arrow down"
-                className="transition-all ease-in-out"
+                className="transition-all"
                 style={isHover[2] ? { rotate: "180deg" } : {}}
               />
             </a>
@@ -86,21 +108,15 @@ const Header = () => {
           <a>Careers</a>
           <a>About</a>
         </div>
-        <div className="ml-auto flex lg:hidden">
+        <div className="ml-auto flex flex-col items-center mt-[30px] gap-[15px]">
           <a>Login</a>
-          <button className="px-6 py-3 border border-medium-gray text-medium-gray hover:border-almost-black hover:text-almost-black rounded-2xl ml-10 transition-colors duration-[0.25s] ease-in-out">
+          <button className="px-6 border border-medium-gray text-medium-gray hover:border-almost-black hover:text-almost-black rounded-2xl transition-colors duration-[0.25s] ease-in-out w-full py-2">
             Register
           </button>
         </div>
-        <img
-          src="./icon-menu.svg"
-          alt="icon menu"
-          className="ml-auto cursor-pointer lg:block hidden"
-          onClick={handleOpen}
-        />
-      </header>
-    </>
+      </div>
+    </div>
   );
 };
 
-export default Header;
+export default MobileMenu;

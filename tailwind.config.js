@@ -8,6 +8,9 @@ export default {
         "medium-gray": "hsl(0, 0%, 41%)",
         "almost-black": "hsl(0, 0%, 8%)",
       },
+      screens: {
+        lg: { max: "1024px" },
+      },
     },
   },
   plugins: [],

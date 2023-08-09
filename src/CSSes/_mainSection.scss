@@ -1,0 +1,10 @@
+#clients {
+  img {
+    width: 70px;
+
+    &:nth-child(2) {
+      height: 25px;
+      width: auto;
+    }
+  }
+}

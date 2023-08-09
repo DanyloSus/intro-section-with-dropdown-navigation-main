@@ -5,6 +5,7 @@
 :root {
   font-family: "Epilogue", sans-serif;
   color: hsl(0, 0%, 8%);
+  overflow-x: hidden;
 }
 
 a,
@@ -21,6 +22,9 @@ header a {
 }
 header a:hover {
   color: hsl(0, 0%, 8%);
+}
+header a img {
+  margin-left: 8px;
 }
 header #features div {
   display: none;
@@ -46,4 +50,45 @@ header div > div > div {
 }
 header div > div > div > a {
   gap: 16px;
+}
+
+#clients img {
+  width: 70px;
+}
+#clients img:nth-child(2) {
+  height: 25px;
+  width: auto;
+}
+
+#mobileMenu a {
+  display: flex;
+  align-items: center;
+}
+#mobileMenu a:hover {
+  color: hsl(0, 0%, 8%);
+}
+#mobileMenu a img {
+  margin-left: 8px;
+}
+#mobileMenu > div > div > div > div {
+  position: relative;
+  left: 20px;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+#mobileMenu > div > div > div > div a {
+  gap: 16px;
+}
+#mobileMenu #features > div {
+  display: none;
+}
+#mobileMenu #features:hover > div {
+  display: flex;
+}
+#mobileMenu #company > div {
+  display: none;
+}
+#mobileMenu #company:hover > div {
+  display: flex;
 }/*# sourceMappingURL=index.css.map */

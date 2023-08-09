@@ -1,0 +1,52 @@
+#mobileMenu {
+  a {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: hsl(0, 0%, 8%);
+    }
+
+    img {
+      margin-left: 8px;
+    }
+  }
+
+  > div > div > div > div {
+    position: relative;
+    left: 20px;
+
+    flex-direction: column;
+    gap: 15px;
+
+    margin-top: 15px;
+
+    a {
+      gap: 16px;
+    }
+  }
+
+  #features {
+    > div {
+      display: none;
+    }
+
+    &:hover {
+      > div {
+        display: flex;
+      }
+    }
+  }
+
+  #company {
+    > div {
+      display: none;
+    }
+
+    &:hover {
+      > div {
+        display: flex;
+      }
+    }
+  }
+}

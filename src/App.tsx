@@ -3,7 +3,7 @@ import MainSection from "./Elements/MainSection";
 
 const App = () => {
   return (
-    <main>
+    <main className="lg:mb-[94px] mb-[124px]">
       <Header />
       <MainSection />
     </main>
