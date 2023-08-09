@@ -1,0 +1,51 @@
+header {
+  a {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+      color: hsl(0, 0%, 8%);
+    }
+  }
+
+  #features {
+    div {
+      display: none;
+    }
+
+    &:hover {
+      div {
+        display: block;
+      }
+    }
+  }
+
+  #company {
+    div {
+      display: none;
+    }
+
+    &:hover {
+      div {
+        display: block;
+      }
+    }
+  }
+
+  div > div {
+    position: relative;
+    > div {
+      position: absolute;
+      top: 20px;
+      padding: 26px 52px 26px 26px;
+      @apply rounded-xl shadow-2xl;
+      left: -25px;
+
+      > a {
+        gap: 16px;
+      }
+    }
+  }
+}

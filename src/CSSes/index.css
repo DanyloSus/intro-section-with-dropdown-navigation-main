@@ -1,3 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
 @tailwind base;
 @tailwind components;
-@tailwind utilities;/*# sourceMappingURL=index.css.map */
+@tailwind utilities;
+:root {
+  font-family: "Epilogue", sans-serif;
+  color: hsl(0, 0%, 8%);
+}
+
+a,
+p {
+  color: hsl(0, 0%, 41%);
+  transition: color 0.25s ease-in-out;
+}
+
+header a {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+header a:hover {
+  color: hsl(0, 0%, 8%);
+}
+header #features div {
+  display: none;
+}
+header #features:hover div {
+  display: block;
+}
+header #company div {
+  display: none;
+}
+header #company:hover div {
+  display: block;
+}
+header div > div {
+  position: relative;
+}
+header div > div > div {
+  position: absolute;
+  top: 20px;
+  padding: 26px 52px 26px 26px;
+  @apply rounded-xl shadow-2xl;
+  left: -25px;
+}
+header div > div > div > a {
+  gap: 16px;
+}/*# sourceMappingURL=index.css.map */
