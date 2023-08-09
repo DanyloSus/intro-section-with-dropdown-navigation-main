@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <>
       <MobileMenu />
-      <header className="w-screen flex items-center px-10 pt-8 lg:pt-6 lg:px-4">
+      <header className="w-screen flex items-center px-10 pt-8 lg:pt-6 lg:px-4 head-left">
         <img src="./logo.svg" alt="logo" className="cursor-pointer" />
         <div className="flex ml-16 gap-10 lg:hidden">
           <div

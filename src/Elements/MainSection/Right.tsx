@@ -1,6 +1,6 @@
 const Right = () => {
   return (
-    <div className="lg:mb-[67px]">
+    <div className="lg:mb-[67px] main-right">
       <img
         src="./image-hero-desktop.png"
         alt="image hero desktop"

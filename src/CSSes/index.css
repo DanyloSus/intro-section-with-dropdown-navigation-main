@@ -91,4 +91,53 @@ header div > div > div > a {
 }
 #mobileMenu #company:hover > div {
   display: flex;
+}
+
+.head-left {
+  animation: head-left 2s ease-in-out backwards;
+}
+
+@keyframes head-left {
+  0% {
+    position: relative;
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    left: 0%;
+    opacity: 1;
+  }
+}
+.main-left {
+  animation: main-left 1s ease-in-out 2s backwards;
+}
+
+@keyframes main-left {
+  0% {
+    position: relative;
+    left: -20px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    left: 0;
+    opacity: 1;
+  }
+}
+.main-right {
+  animation: main-right 1s ease-in-out 1.9s backwards;
+}
+
+@keyframes main-right {
+  0% {
+    position: relative;
+    right: -20px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    right: 0;
+    opacity: 1;
+  }
 }/*# sourceMappingURL=index.css.map */

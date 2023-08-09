@@ -1,6 +1,6 @@
 const Left = () => {
   return (
-    <div className="w-[508px] flex flex-col gap-[52px] items-start lg:items-center lg:w-full lg:text-center lg:px-5 lg:gap-7">
+    <div className="w-[508px] flex flex-col gap-[52px] items-start lg:items-center lg:w-full lg:text-center lg:px-5 lg:gap-7 main-left">
       <h1 className="text-[77.5599px] leading-[75px] font-bold lg:text-[35.0999px] lg:leading-[0]">
         Make remote work
       </h1>
